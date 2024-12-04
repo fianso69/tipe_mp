@@ -1,0 +1,36 @@
+.DS_Store
+.vscode
+.idea
+__pycache__
+test.py
+.pytest_cache
+
+
+*.ai
+*.pptx
+
+datasetBmp
+
+#latex related
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.fdb_latexmk
+*.synctex.gz
+*.pygstyle
+*.pygtex
+*.run.xml
+
+#latex + biblatex related
+*.bbl 
+*.bcf
+*.blg

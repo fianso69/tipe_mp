@@ -1,0 +1,48 @@
+\documentclass[a4paper, 11pt]{article}
+
+\author{Sofiane MAMI}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1] {fontenc}
+\usepackage[backend=biber, maxbibnames=5, style=numeric, sorting=none]{biblatex}
+\usepackage{csquotes}
+\DeclareCiteCommand{\supercite}[\mkbibsuperscript]
+  {\iffieldundef{prenote}
+     {}
+     {\BibliographyWarning{Ignoring prenote argument}}%
+   \iffieldundef{postnote}
+     {}
+     {\BibliographyWarning{Ignoring postnote argument}}}
+  {\usebibmacro{citeindex}%
+   \textbf{\bibopenbracket\usebibmacro{cite}\bibclosebracket}}
+  {\supercitedelim}
+  {}
+
+\addbibresource{refs.bib}
+
+\let\cite=\supercite
+
+\title{La compression de donn\'ees appliqu\'ee aux images}
+
+\begin{document}
+    
+\begin{center}
+    {\textbf {\LARGE DOT - La compression de donn\'ees appliqu\'ee aux images}} \\
+    \vspace{3mm}
+    {\small Sofiane MAMI}
+\end{center}
+
+\vspace{5mm}
+
+\begin{itemize}
+    \item $\bigl[$Novembre 2022 - Identification des différents procédés de compression, et découverte de l'algorithme JPEG, regroupant de nombreuses méthodes efficaces.$\bigr]$
+    \item $\bigl[$Janvier 2023 - Renseignement sur des méthodes plus récentes, mais le manque d'implémentation/applications n'a pas vraiment permis de nous aventurer dans cette direction$\bigr]$
+    \item $\bigl[$Février-Mars 2023 - Implémentation des différents procédés de compression et des outils nécessaire à l'encodage final$\bigr]$
+    \item $\bigl[$Avril 2023 - Difficultés rencontrées vis-à-vis des standards du format JPEG, afin de pouvoir avoir des données fiables et représentatives pour les comparaisons.$\bigr]$
+    \item $\bigl[$Mai 2023 - La lecture des normes JPEG \cite{jpegStd} a permis d'éclaircir les zones d'ombres du format JPEG et un encodeur et décodeur complets ont pu être réalisés. Les données ont ensuite pu être exploitées.$\bigr]$
+\end{itemize}
+
+\printbibliography[title=Références bibliographiques]
+
+\end{document}
